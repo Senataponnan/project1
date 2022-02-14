@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        * {box-sizing: border-box}
+        
+    
+        body, html {
+          height: 100%;
+          margin: 0;
+          font-family: 'Times New Roman', Times, serif;
+        }
+        
+        
+        .tablink {
+          background-color: rgb(7, 4, 4);
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 17px;
+          width: 25%;
+        }
+        
+        .tablink:hover {
+          background-color: rgb(18, 80, 5);
+        }
+        
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+          color: white;
+          display: none;
+          padding: 100px 20px;
+          height: 100%;
+        }
+        
+        #Home {background-color:rgb(17, 8, 41);}
+        #Contact {background-color: blue;}
+        #About  {background-color: blueviolet;}
+        </style>
+        </head>
+        <body>
+        
+        <button class="tablink" onclick="openPage('Home', this, 'greenyellow')">Home</button>
+        <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+        <button class="tablink" onclick="openPage('About', this, 'blueviolet')">About</button>
+        
+        <div id="Home" class="tabcontent">
+            <style>
+                img {
+                  border-radius: 300px;
+                }
+                </style>
+                <style>
+                img {
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+                </style>
+              <img src="hin.jpg" alt="a cartoon of simson" width="500" height="600">
+              
+          <h3>Ponnan Musa</h3>
+          <p style="text-align: justify;">My name is Ponnan Musa. I am from Plateau State,North-Central Nigeria.I think of my self-worth nowadays in rather realistic terms knowing that I have a collection of both positive and negative traits.</p>
+          <p style="text-align: justify;"> Among the positive traits I have are my caring attitude and tendency to protect those who I deem close. I highly value my honest and straightforward manner of communicating with people, which, later in life, I learned to control better in order to avoid being offensive. I have witnessed on several occasions how this honesty helped people get a clearer perspective over their personal issues and make progress towards solving them.</p>
+            <p style="text-align: justify;"> As we are defined by our values/ beliefs, it is worth mentioning that the character traits I view as most desirable in a person are: dependability, trustworthiness, responsibility, honesty, conscientiousness, respectfulness. The main thing providing meaning in my life is ensuring the wellbeing of people I hold dear but also making positive changes, however, small, that would improve the life of my community.  Hence my motivation to join the <b>Code Plateau</b> </p>.
+            <p style="text-align: justify;">As for my professional life, meaning is provided by the desire to be appreciated for my conscientious attitude, discipline, competence. My seriousness and deep involvement, as well as my capabilities for leading and decision making, could be of great value in organizing small groups of people. However, I am probably more successful at leading by example and providing direct assistance/ guidance rather than making deep connections with people in order to motivate them.</p>
+            <p style="text-align: justify;"> All these mentioned beliefs, values, and traits (good or bad) define who I am. They represent all I have been through, witnessed, and experienced throughout the years and how I reacted to this as a growing/ developing individual. The best I could hope for is to make good use of all the positive aspects while controlling the negative ones.</p></p>
+        </div>
+        
+        <div id="Contact" class="tabcontent">
+          <h3>Contact</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+        
+        <div id="About" class="tabcontent">
+          <h3>About Ponnan</h3>
+          <h2>Ponnan in Code Plateau</h2>
+    <img src="code.jpeg">
+    
+        <p style="text-align:justify;"><br>In the words of Chris Matakas“The best yardstick for our progress is not other people, but ourselves. Am I better than I was yesterday? This is the only question worth asking. As long as you go to bed at night a better practitioner than the one who woke up that morning, you have succeeded. Your worth should have nothing to do with how your progress stacks up relative to another.” Everyday in code plateau my worth and value incraeses by what i am taught by  facilatators, Not forgeting the place of personal research.</p>
+        </div>
+        <script>
+            function openPage(pageName,elmnt,color) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+              }
+              document.getElementById(pageName).style.display = "block";
+              elmnt.style.backgroundColor = color;
+            }
+            
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+            </script>
+        
+</html>
